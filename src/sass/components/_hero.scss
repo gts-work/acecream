@@ -1,3 +1,95 @@
+.hero {
+  //   position: relative;
+
+  background-color: $color-pink-dark;
+  width: 100%;
+}
+
+.hero__container {
+  @include container(0, 0);
+
+  position: relative;
+
+  //   min-width: 320px;
+  max-width: 417px;
+  //   height: 410px;
+
+  padding-top: 92px;
+
+  overflow: hidden;
+}
+
+.hero__title {
+  //   display: inline-flex;
+  //   position: relative;
+  position: absolute;
+
+  top: 193px;
+  left: 20px;
+
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+
+  color: $color-white;
+
+  z-index: 1;
+}
+
+.sub-title {
+  font-size: 48px;
+  line-height: 0.96;
+
+  color: $color-red;
+}
+
+.circle {
+  position: absolute;
+
+  left: 36px;
+  top: 83px;
+
+  width: 346px;
+  height: 346px;
+
+  border-radius: 50%;
+
+  background: $color-pink;
+}
+
+.hero__image-icecream {
+  display: inline-block;
+  position: relative;
+
+  //   max-width: 171px;
+  max-width: 100%;
+
+  //   right: 0;
+  //   top: 100%;
+
+  //   padding: 0;
+  margin-left: 117px;
+  margin-right: 32px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: -5px;
+
+  border: 0;
+}
+
+.command__image {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 // .icon {
 //   background-color: orange;
 // }
+
+// width: 346px;
+// height: 344px;
+// left: 36px;
+// top: 83px;

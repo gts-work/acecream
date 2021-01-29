@@ -1,6 +1,76 @@
-<h1>Hero</h1>
-<!-- <a href="" class="clients__link">
-  <svg class="icon" width="12" height="12">
-    <use href="./images/sprite.svg#arrow-right"></use>
-  </svg>
-</a> -->
+<div class="hero__container">
+  <h1 class="hero__title">
+    ice cream<br />made with<br /><span class="sub-title">passion</span>
+  </h1>
+
+  <div class="circle"></div>
+
+  <picture>
+    <source
+      srcset="
+        ./images/hero/desctop/hero-icecream_desctop.webp    1x,
+        ./images/hero/desctop/hero-icecream_desctop@2x.webp 2x,
+        ./images/hero/desctop/hero-icecream_desctop@3x.webp 3x
+      "
+      type="image/webp"
+      media="(min-width:1280px)"
+    />
+    <source
+      srcset="
+        ./images/hero/desctop/hero-icecream_desctop.png    1x,
+        ./images/hero/desctop/hero-icecream_desctop@2x.png 2x,
+        ./images/hero/desctop/hero-icecream_desctop@3x.png 3x
+      "
+      media="(min-width:1280px)"
+    />
+
+    <source
+      srcset="
+        ./images/hero/tab/hero-icecream_tab.webp    1x,
+        ./images/hero/tab/hero-icecream_tab@2x.webp 2x,
+        ./images/hero/tab/hero-icecream_tab@3x.webp 3x
+      "
+      type="image/webp"
+      media="(min-width:768px)"
+    />
+    <source
+      srcset="
+        ./images/hero/tab/hero-icecream_tab.png    1x,
+        ./images/hero/tab/hero-icecream_tab@2x.png 2x,
+        ./images/hero/tab/hero-icecream_tab@3x.png 3x
+      "
+      media="(min-width:768px)"
+    />
+
+    <source
+      srcset="
+        ./images/hero/mob/hero-icecream_mob.webp    1x,
+        ./images/hero/mob/hero-icecream_mob@2x.webp 2x,
+        ./images/hero/mob/hero-icecream_mob@3x.webp 3x
+      "
+      type="image/webp"
+      media="(max-width:767px)"
+    />
+    <source
+      srcset="
+        ./images/hero/mob/hero-icecream_mob.png    1x,
+        ./images/hero/mob/hero-icecream_mob@2x.png 2x,
+        ./images/hero/mob/hero-icecream_mob@3x.png 3x
+      "
+      media="(max-width:767px)"
+    />
+
+    <img
+      class="hero__image-icecream"
+      src="./images/hero/mob/hero-icecream_mob.png"
+      alt="Ice Cream"
+      width="171"
+    />
+  </picture>
+
+  <!-- <a href="" class="clients__link">
+    <svg class="icon" width="12" height="12">
+      <use href="./images/sprite.svg#arrow-right"></use>
+    </svg>
+  </a> -->
+</div>
