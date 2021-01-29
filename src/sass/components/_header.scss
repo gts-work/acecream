@@ -1,0 +1,125 @@
+.header {
+  position: relative;
+  padding: 6px 20px 0 20px;
+  background-color: $color-pink-dark;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+
+  //   @media screen and (min-width: 1200px) {
+  //     width: 100%;
+  //   }
+}
+
+.header__mob-menu {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    fill: $color-red;
+  }
+  & .icon-close {
+    display: none;
+  }
+  &.is-open .icon-close {
+    display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.header__menu {
+  @media screen and (max-width: 767px) {
+    // display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    text-align: left;
+    padding: 60px 21px;
+    background-color: #e17992;
+    &.is-open {
+      display: block;
+      z-index: 10;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.header__list {
+  @extend %list;
+  & .link.current {
+    color: $color-red;
+  }
+}
+
+.header__list .link {
+  @extend %link;
+  color: $color-white;
+  font-weight: 700;
+  &:hover,
+  &:focus {
+    color: $color-red;
+  }
+  @media screen and (max-width: 1199px) {
+    font-size: 14px;
+  }
+}
+
+.header__list .item {
+  justify-content: center;
+  height: 42px;
+  border-bottom: 1px solid;
+  border-color: #e18298;
+  &:first-child {
+    border-top: 1px solid;
+    border-color: #e18298;
+  }
+}
+
+.buy__btn {
+  @extend %link;
+  margin-right: 20px;
+  position: relative;
+  width: 209px;
+  height: 44px;
+  font-weight: 700;
+  color: $color-red;
+  background-color: $color-white;
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 19px;
+  &:hover,
+  &:focus {
+    background-color: $active-color-bg;
+  }
+}
+
+.btn__arrow {
+  margin-left: 16px;
+}
