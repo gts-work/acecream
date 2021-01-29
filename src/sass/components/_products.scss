@@ -47,17 +47,16 @@
 .products__card {
   height: 485px;
   padding: 161px 0 41px;
-  background: #f0d1a5;
   border-radius: 24px;
-  &:nth-child(1) {
-    background-color: $color-pink-dark;
-  }
-  &:nth-child(2) {
-    background-color: $color-orange;
-  }
-  &:nth-child(3) {
-    background-color: $color-green;
-  }
+}
+.product-1 {
+  background-color: $color-pink-dark;
+}
+.product-2 {
+  background-color: $color-orange;
+}
+.product-3 {
+  background-color: $color-green;
 }
 .products__item-name {
   margin: 0 auto 30px;
@@ -103,13 +102,13 @@
   background-color: $color-white;
   &:hover,
   &:focus {
-    background-color: $color-pink-dark;
+    background-color: $color-red;
+    .products__arow-right {
+      fill: $color-white;
+    }
   }
 }
 .products__arow-right {
   fill: $color-red;
-  &:hover,
-  &:focus {
-    fill: $color-white;
-  }
+  height: 40px;
 }
