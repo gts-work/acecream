@@ -84,7 +84,7 @@
 }
 
 .hero__btn {
-  @include button(none, none, $padding: 8px 13px 8px 13px);
+  @include button(none, none, $padding: 9px 13px 9px 13px);
 
   display: inline-flex;
 
@@ -129,7 +129,6 @@
 @media screen and (max-width: $media-mob) {
   .hero__image-icecream {
     width: 53.44vw;
-    // height: 128.125vw;
 
     margin-left: 36.56vw;
     margin-right: 10vw;
@@ -173,29 +172,39 @@
   }
 }
 
-// @media screen and (min-width: $media-mob) {
-//   .hero__image-icecream {
-//     width: 171px;
-//     margin-left: 117px;
-//     margin-right: 32px;
-//   }
+@media screen and (max-width: 575px) {
+  .hero__container {
+    max-width: 120vw;
+  }
 
-//   .circle {
-//     left: 36px;
-//     top: 83px;
+  .hero__image-icecream {
+    margin-left: 50vw;
+  }
 
-//     width: 346px;
-//     height: 346px;
-//   }
+  .circle {
+    left: 35vw;
+  }
+}
 
-//   .hero__title {
-//     top: 193px;
-//     left: 20px;
+@media screen and (min-width: $media-mob-middle) {
+  .hero__container {
+    max-width: $media-mob-middle;
+  }
 
-//     font-size: 26px;
-//   }
+  .hero__image-icecream {
+    margin-left: 290px;
+    // margin-right: 10vw;
+  }
 
-//   .sub-title {
-//     font-size: 48px;
-//   }
-// }
+  .circle {
+    left: 200px;
+  }
+
+  .hero__title {
+    left: 27px;
+  }
+
+  .hero__menu {
+    left: 27px;
+  }
+}
