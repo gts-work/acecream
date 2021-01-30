@@ -120,7 +120,10 @@
 .hero__number,
 .hero__text,
 .hero__circlemin,
-.hero__image-girl {
+.hero__image-girl,
+.hero__image-milk,
+.hero__description,
+.hero__block {
   display: none;
 }
 
@@ -185,11 +188,11 @@
   }
 
   .hero__image-icecream {
-    margin-left: 50vw;
+    margin-left: 36vw;
   }
 
   .circle {
-    left: 35vw;
+    left: 11vw;
   }
 }
 
@@ -225,6 +228,7 @@
     width: 143px;
     margin-left: 378px;
     margin-right: 0;
+    margin-bottom: -23px;
   }
 
   .hero__image-girl {
@@ -233,6 +237,79 @@
 
     right: 34px;
     bottom: 0;
+
+    // width: 171px;
+    // max-width: 100%;
+
+    // margin-left: 556px;
+    // margin-right: 34px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: -5px;
+
+    border: 0;
+  }
+
+  .hero__description {
+    display: block;
+    position: absolute;
+
+    width: 114px;
+
+    left: 154px;
+    bottom: 59px;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.5;
+    color: $color-white;
+  }
+
+  .hero__block {
+    display: block;
+    position: absolute;
+
+    // left: 154px;
+    // bottom: 30px;
+  }
+
+  .hero__icon-item {
+    display: inline-block;
+    position: relative;
+
+    left: 154px;
+    bottom: 50px;
+
+    // margin-right: auto;
+    // margin-left: auto;
+    // padding: 7px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background-color: $color-white;
+  }
+
+  .hero__icon {
+    position: relative;
+
+    // top: 0;
+    left: 3px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    fill: $color-red;
+  }
+
+  .hero__image-milk {
+    display: inline-block;
+    position: absolute;
+
+    left: 34px;
+    bottom: 28px;
 
     // width: 171px;
     // max-width: 100%;
