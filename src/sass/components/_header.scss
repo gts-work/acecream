@@ -19,19 +19,22 @@
   display: inline-block;
   padding: 0;
   border: none;
+  position: relative;
   background-color: transparent;
   cursor: pointer;
   &:focus,
   &:hover {
     fill: $color-red;
   }
-  & .icon-close {
+  & .close {
     display: none;
   }
-  &.is-open .icon-close {
+  &.is-open .close {
     display: block;
+    position: absolute;
+    z-index: 999999999;
   }
-  &.is-open .icon-menu {
+  &.is-open .burger {
     display: none;
   }
   @media screen and (min-width: 768px) {
@@ -39,22 +42,23 @@
   }
 }
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
+// .is-hidden {
+//   opacity: 0;
+//   pointer-events: none;
+//   visibility: hidden;
+// }
 
 .header__menu {
   @media screen and (max-width: 767px) {
-    // display: none;
+    display: none;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0px;
     width: 250px;
     text-align: left;
-    padding: 60px 21px;
+    padding: 60px 0 60px;
     background-color: #e17992;
+    transition: left $time-var $transform-function;
     &.is-open {
       display: block;
       z-index: 10;
@@ -70,8 +74,14 @@
   }
 }
 
+// .header__menu-close {
+//   border: none;
+//   background-color: transparent;
+// }
+
 .header__list {
   @extend %list;
+  transition: $time-var $transform-function;
   & .link.current {
     color: $color-red;
   }
@@ -90,9 +100,10 @@
   }
 }
 
-.header__list .item {
+.header__list .header__item {
   justify-content: center;
   height: 42px;
+  padding: 0 21px 0 21px;
   border-bottom: 1px solid;
   border-color: #e18298;
   &:first-child {
@@ -101,9 +112,9 @@
   }
 }
 
-.buy__btn {
+.header__buy-btn {
   @extend %link;
-  margin-right: 20px;
+  margin: 0 20px 19px 21px;
   position: relative;
   width: 209px;
   height: 44px;
@@ -113,7 +124,6 @@
   border-radius: 22px;
   cursor: pointer;
   border: none;
-  margin-bottom: 19px;
   &:hover,
   &:focus {
     background-color: $active-color-bg;
