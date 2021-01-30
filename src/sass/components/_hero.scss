@@ -117,6 +117,12 @@
   background-color: $color-white;
 }
 
+.hero__number,
+.hero__text,
+.hero__circlemin {
+  display: none;
+}
+
 // .icon {
 //   background-color: orange;
 // }
@@ -206,5 +212,90 @@
 
   .hero__menu {
     left: 27px;
+  }
+}
+
+@media screen and (min-width: $media-tab) {
+  .hero__container {
+    max-width: $media-tab;
+  }
+
+  .hero__image-icecream {
+    margin-left: 378px;
+    // margin-right: 10vw;
+  }
+
+  .circle {
+    left: 307px;
+  }
+
+  .hero__number,
+  .hero__text,
+  .hero__circlemin {
+    display: inline-block;
+
+    position: absolute;
+  }
+
+  .hero__number {
+    // left: 691px;
+    right: 44px;
+
+    font-family: Titan One;
+    font-size: 28px;
+    line-height: 1.43;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    z-index: 5;
+
+    color: $color-red;
+
+    &.hero__cales {
+      top: 92px;
+    }
+
+    &.hero__trucks {
+      top: 148px;
+    }
+  }
+
+  .hero__text {
+    right: 42px;
+    top: 128px;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+
+    color: $color-white;
+
+    &.hero__cales-txt {
+      top: 128px;
+    }
+
+    &.hero__trucks-txt {
+      top: 184px;
+    }
+  }
+
+  .hero__circlemin {
+    background-color: $color-white;
+
+    right: 34px;
+
+    border-radius: 50%;
+
+    width: 16px;
+    height: 16px;
+
+    &.hero__csrcle_1 {
+      top: 94px;
+    }
+
+    &.hero__csrcle_2 {
+      top: 151px;
+    }
   }
 }
