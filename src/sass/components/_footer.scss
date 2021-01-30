@@ -1,11 +1,5 @@
 .footer {
-  background-image: url(../../src/images/made/mob/made-bg_mob.png);
-}
-
-@media (min-resolution: 2dppx) {
-  .footer {
-    background-image: url(../../src/images/made/mob/made-bg_mob@2x.png);
-  }
+  background-color: $color-pink-light;
 }
 
 .footer__container {
@@ -18,19 +12,28 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 113px;
+  @media screen and (min-width: 576px) {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .legal__item {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   @include button(161px, 44px, 10px 17px 10px 17px);
+  min-width: 161px;
   border-radius: 22px;
   border: none;
   color: $color-white;
   cursor: pointer;
   &:not(:last-child) {
     margin-bottom: 10px;
+    @media screen and (min-width: 576px) {
+      margin-bottom: unset;
+      margin-right: 98px;
+    }
   }
   &:hover, &:focus {
     background-color: $active-color;
@@ -47,15 +50,28 @@
 }
 
 .legal__link {
-  display: flex;
-  align-items: center;
   color: inherit;
   @extend %link;
+  font-weight: 700;
+  display: flex;
+  min-width: 161px;
+  align-items: center;
+  justify-content: center;
 }
 
 .legal__icon {
   margin-left: 11px;
   fill: currentColor;
+}
+
+.footer__align {
+  @media screen and (min-width: 576px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
 }
 
 .footer__accent {
@@ -79,14 +95,24 @@
   letter-spacing: 0.04em;
 }
 
+.footer__contacts {
+  @media screen and (min-width: 576px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .nets__list {
   @extend %list;
+  height: 32px;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 46px;
 }
 
 .nets__item {
+  width: 32px;
+  height: 32px;
   &:not(:last-child) {
     margin-right: 28px;
   }
@@ -125,7 +151,7 @@
 
 .copyright {
   padding: 22px 0 25px 0;
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 767px) {
     max-width: 150px;
   }
 }
