@@ -1,0 +1,21 @@
+.gallery {
+  position: relative;
+}
+
+.gallery__photo {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+
+  @media screen and (max-width: 767px) {
+    top: -5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: -124px;
+  }
+
+  // display: block;
+  // width: 100%;
+}
