@@ -22,6 +22,7 @@
   position: relative;
   background-color: transparent;
   cursor: pointer;
+  transition: $time-var $transform-function;
   &:focus,
   &:hover {
     fill: $color-red;
@@ -81,7 +82,7 @@
 
 .header__list {
   @extend %list;
-  transition: $time-var $transform-function;
+  // transition: $time-var $transform-function;
   & .link.current {
     color: $color-red;
   }
@@ -91,6 +92,7 @@
   @extend %link;
   color: $color-white;
   font-weight: 700;
+  transition: $time-var $transform-function;
   &:hover,
   &:focus {
     color: $color-red;
@@ -103,7 +105,7 @@
 .header__list .header__item {
   justify-content: center;
   height: 42px;
-  padding: 0 21px 0 21px;
+  padding: 13px 21px 0 21px;
   border-bottom: 1px solid;
   border-color: #e18298;
   &:first-child {
@@ -124,6 +126,7 @@
   border-radius: 22px;
   cursor: pointer;
   border: none;
+  transition: $time-var $transform-function;
   &:hover,
   &:focus {
     background-color: $active-color-bg;
