@@ -3,9 +3,13 @@
   background-color: $active-color-bg;
 }
 .products__container {
-  padding-left: 20px;
-  padding-right: 20px;
-  width: $media-mob;
+  min-width: 250px;
+  margin: 0 auto 0;
+  padding: 121px 20px 81px;
+  background-color: $active-color-bg;
+  @media screen and (min-width: $media-mob) {
+    width: $media-mob;
+  }
 }
 .products__natural {
   display: block;
@@ -33,8 +37,8 @@
   text-transform: uppercase;
 }
 .products__list {
-  width: 100%;
   @extend %list;
+  margin: 0 auto 0;
 }
 .products__list-item {
   margin: 0 0 17px;
@@ -46,7 +50,6 @@
   margin: 0 auto -139px;
 }
 .products__card {
-  height: 485px;
   padding: 161px 0 41px;
   border-radius: 24px;
 }
