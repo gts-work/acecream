@@ -1,0 +1,114 @@
+.products__container {
+  min-width: 250px;
+  margin: 0 auto 0;
+  padding: 121px 20px 81px;
+  background-color: $active-color-bg;
+  @media screen and (min-width: $media-mob) {
+    width: $media-mob;
+  }
+}
+.products__natural {
+  display: block;
+  margin: 0 0 15px;
+
+  font-family: 'Titan One', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.166;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $color-pink;
+}
+.products__title {
+  margin: 0 0 31px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 1.147;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.products__list {
+  @extend %list;
+  margin: 0 auto 0;
+}
+.products__list-item {
+  margin: 0 0 17px;
+  width: 100%;
+}
+.products__card-image {
+  display: block;
+  width: max-content;
+  margin: 0 auto -139px;
+}
+.products__card {
+  padding: 161px 0 41px;
+  border-radius: 24px;
+}
+.product-1 {
+  background-color: $color-pink-dark;
+}
+.product-2 {
+  background-color: $color-orange;
+}
+.product-3 {
+  background-color: $color-green;
+}
+.products__item-name {
+  margin: 0 auto 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.15;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $color-white;
+}
+.products__card-points {
+  fill: $color-white;
+  display: block;
+  height: 6px;
+  margin: 0 auto 30px;
+}
+.products__item-description {
+  width: 200px;
+  margin: 0 auto 30px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.52;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: $color-white;
+}
+.products__view-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 0;
+  border-radius: 50%;
+  background-color: $color-white;
+  &:hover,
+  &:focus {
+    background-color: $color-red;
+    .products__arow-right {
+      fill: $color-white;
+    }
+  }
+}
+.products__arow-right {
+  fill: $color-red;
+  height: 38px;
+}
