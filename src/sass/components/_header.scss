@@ -1,9 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   position: absolute;
   width: 100%;
   max-height: 50px;
   top: 0;
   left: 0;
+  z-index: 5;
   @media screen and (min-width: 768px) {
     max-height: 82px;
   }
@@ -39,14 +44,14 @@
   width: 250px;
   min-width: 250px;
   height: 395px;
-  position: fixed;
+  // position: fixed;
   top: 0;
   margin: 0;
   right: -250px;
   padding: 60px 0 60px;
   transition: right $time-var $transform-function;
   background-color: #e17992;
-  z-index: 2;
+  z-index: 6;
   //   @media screen and (min-width: 1200px) {
   //     width: 100%;
   //   }
@@ -76,34 +81,34 @@
   // }
 }
 
-[id='nav-toggle'] {
-  position: absolute;
-  display: none;
-}
+// [id='nav-toggle'] {
+//   position: absolute;
+//   display: none;
+// }
 
-[id='nav-toggle']:checked ~ .header__nav > .header__nav-toggle {
-  left: auto;
-  right: 2px;
-  top: 0;
-}
+// [id='nav-toggle']:checked ~ .header__nav > .header__nav-toggle {
+//   left: auto;
+//   right: 2px;
+//   top: 0;
+// }
 
-[id='nav-toggle']:checked ~ .header__nav {
-  right: 0;
-  box-shadow: 4px 0px 20px 0px $active-color;
-  // overflow-y: auto;
-}
+// [id='nav-toggle']:checked ~ .header__nav {
+//   right: 0;
+//   box-shadow: 4px 0px 20px 0px $active-color;
+//   // overflow-y: auto;
+// }
 
-[id='nav-toggle']:checked ~ .header__nav > .header__nav-toggle:after {
-  content: '\2715';
-  height: 14px;
-  width: 14px;
-  color: $color-white;
-  padding: 25px 30px;
-  &:focus,
-  &:hover {
-    color: $color-red;
-  }
-}
+// [id='nav-toggle']:checked ~ .header__nav > .header__nav-toggle:after {
+//   content: '\2715';
+//   height: 14px;
+//   width: 14px;
+//   color: $color-white;
+//   padding: 25px 30px;
+//   &:focus,
+//   &:hover {
+//     color: $color-red;
+//   }
+// }
 
 /**
  * профиксим баг в Android <= 4.1.2
@@ -147,10 +152,10 @@ body {
   margin-left: 16px;
 }
 
-[id='nav-toggle']:checked ~ .header__nav .header__buy-btn {
-  opacity: 1;
-  transform: scale(1, 1);
-}
+// [id='nav-toggle']:checked ~ .header__nav .header__buy-btn {
+//   opacity: 1;
+//   transform: scale(1, 1);
+// }
 
 .header__list {
   @extend %list;
@@ -176,10 +181,10 @@ body {
   transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
 }
 
-[id='nav-toggle']:checked ~ .header__nav > .header__list > .header__item {
-  opacity: 1;
-  transform: translateX(0);
-}
+// [id='nav-toggle']:checked ~ .header__nav > .header__list > .header__item {
+//   opacity: 1;
+//   transform: translateX(0);
+// }
 
 .header__nav > .header__list > .header__item:nth-child(2) {
   transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;

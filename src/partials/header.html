@@ -13,9 +13,12 @@
         </picture>
     </div>
 
-    <input type="checkbox" id="nav-toggle" hidden>
+    <!-- <input type="checkbox" id="nav-toggle" hidden> -->
+    <button onclick="handleTopNav()">
+        +
+    </button>
     <nav class="header__nav">
-        <label for="nav-toggle" class="header__nav-toggle" onclick></label>
+        <!-- <label for="nav-toggle" class="header__nav-toggle" onclick></label> -->
         <button type="button" class="header__buy-btn">Buy now
             <svg class="header__btn-arrow" width="8" height="8">
                 <use href="./images/sprite.svg#right"></use>
@@ -37,5 +40,28 @@
             <use href="./images/sprite.svg#right"></use>
         </svg>
     </button>
+
+    <!-- <script src="../mobile-menu.js"/> -->
+    <script>
+
+        function handleTopNav() => {
+            const mobileMenuRef = document.querySelector('.header__nav');
+            console.log(mobileMenuRef);
+            mobileMenuRef.style.right = 0;
+
+        }
+        // const menuBtnRef = document.querySelector('[data-menu-button]');
+
+        // menuBtnRef.addEventListener('click', () => {
+        //   const expanded =
+        //     menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+
+        //   menuBtnRef.classList.toggle('is-open');
+        //   menuBtnRef.setAttribute('aria-expanded', !expanded);
+
+        //   mobileMenuRef.classList.toggle('is-open');
+        // });
+        
+    </script>
        
 
