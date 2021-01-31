@@ -1,0 +1,41 @@
+<div class="header__container">
+    <h1 class="visually-hidden">Header</h1>
+    <div class="header__logo">
+        <picture>
+            <source srcset="./images/header/logo.webp,
+                            ./images/header/logo@2x.webp 2x,
+                            ./images/header/logo@3x.webp 3x" type="image/webp">
+            <img srcset="./images/header/logo.png,
+                         ./images/header/logo@2x.png 2x,
+                         ./images/header/logo@3x.png 3x" 
+                         src="./images/header/logo.png"
+                         alt="logo">
+        </picture>
+    </div>
+
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="header__nav">
+        <label for="nav-toggle" class="header__nav-toggle" onclick></label>
+        <button type="button" class="header__buy-btn">Buy now
+            <svg class="header__btn-arrow" width="8" height="8">
+                <use href="./images/sprite.svg#right"></use>
+            </svg>
+        </button>
+        <ul class="header__list">
+            <li class="header__item"><a href="" class="link current">Home</a></li>
+            <li class="header__item"><a href="" class="link">About us</a></li>
+            <li class="header__item"><a href="#made" class="link">How it’s made?</a></li>
+            <li class="header__item"><a href="#products" class="link">Our products</a></li>
+            <li class="header__item"><a href="#contacts" class="link">Contact</a></li>
+        </ul>
+        <!-- <div class="mask-content"></div> -->
+    </nav>
+
+    <!-- Buy button for tablet -->
+    <button type="button" class="header__btn tablet">Buy now
+        <svg class="header__btn-arrow" width="8" height="8">
+            <use href="./images/sprite.svg#right"></use>
+        </svg>
+    </button>
+       
+

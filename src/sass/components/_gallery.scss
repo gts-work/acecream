@@ -1,0 +1,27 @@
+.gallery {
+  background-image: linear-gradient(
+    to bottom,
+    $color-pink-light 40%,
+    $color-white 40%
+  );
+}
+
+.gallery__photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  height: auto;
+
+  @media screen and (min-width: $media-mob-middle) {
+    width: 576px;
+  }
+
+  @media screen and (min-width: $media-tab) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $media-desctop) {
+    width: 1280px;
+  }
+}

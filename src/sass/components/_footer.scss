@@ -1,0 +1,211 @@
+.footer {
+  background-color: $color-pink-light;
+}
+
+.footer__container {
+  @include container(20px, 20px);
+  @media screen and (min-width: 768px) {
+    @include container(36px, 36px);
+  }
+  @media screen and (min-width: 1280px) {
+    @include container(115px, 115px);
+  }
+}
+
+.legal__list {
+  @extend %list;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 113px;
+  @media screen and (min-width: 576px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 165px;
+  }
+}
+
+.legal__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @include button(161px, 44px, 10px 17px 10px 17px);
+  min-width: 161px;
+  border-radius: 22px;
+  border: none;
+  color: $color-white;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+    @media screen and (min-width: 576px) {
+      margin-bottom: unset;
+      margin-right: 98px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: 15px;
+    }
+  }
+  &:hover, &:focus {
+    background-color: $active-color;
+  }
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.legal__item.light {
+  color: $color-red;
+  background-color: $color-white;
+  fill: currentColor;
+  &:hover, &:focus {
+    background-color: $active-color-bg;
+  }
+}
+
+.legal__link {
+  color: inherit;
+  @extend %link;
+  font-weight: 700;
+  display: flex;
+  min-width: 161px;
+  align-items: center;
+  justify-content: center;
+  fill: currentColor;
+}
+
+.legal__icon {
+  margin-left: 11px;
+  // color: black;
+}
+
+.footer__align {
+  @media screen and (min-width: 576px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+}
+
+.footer__title {
+  max-width: 234px;
+  text-transform: uppercase;
+  margin-bottom: 43px;
+  @media screen and (min-width: 768px) {
+    max-width: 340px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 477px;
+  }
+}
+
+.footer__accent {
+  display: inline-block;
+  font-family: Titan One;
+  color: $color-pink;
+  font-size: 18px;
+  line-height: 1.17;
+  margin-bottom: 17px;
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.footer__name {
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    letter-spacing: 0.06em;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+
+.footer__contacts {
+  @media screen and (min-width: 576px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.nets__list {
+  @extend %list;
+  height: 32px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 46px;
+}
+
+.nets__item {
+  width: 32px;
+  height: 32px;
+  &:not(:last-child) {
+    margin-right: 28px;
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.nets__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: $color-pink;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background-color: $color-red;
+  }
+}
+
+.footer-call {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.86;
+  text-align: right;
+  margin-bottom: 43px;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+}
+
+.footer-call__link {
+  text-decoration: none;
+  color: $color-red;
+}
+
+.footer__container.line {
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.copyright {
+  padding: 9px 0 10px 0;
+  @media screen and (max-width: 767px) {
+    max-width: 150px;
+  }
+}
+
+.copyright__text {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: $color-gray;
+}
