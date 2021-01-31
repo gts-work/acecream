@@ -1,0 +1,242 @@
+.header {
+  position: absolute;
+  width: 100%;
+  max-height: 50px;
+  @media screen and (min-width: 7680px) {
+    max-height: 82px;
+  }
+}
+
+.header__container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 30px 0 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  position: fixed;
+}
+
+.header__nav {
+  width: 250px;
+  min-width: 250px;
+  height: 395px;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  right: -250px;
+  padding: 60px 0 60px;
+  transition: right $time-var $transform-function;
+  background-color: #e17992;
+  z-index: 2;
+  //   @media screen and (min-width: 1200px) {
+  //     width: 100%;
+  //   }
+}
+
+.header__nav-toggle {
+  @extend %link;
+  position: absolute;
+  right: 250px;
+  top: 0;
+  padding: 25px 30px;
+  // background: inherit;
+  color: $color-red;
+  cursor: pointer;
+  font-weight: 700;
+  z-index: 3;
+  transition: color $time-var $transform-function;
+  &::after {
+    content: '\2630';
+    text-decoration: none;
+    width: 20px;
+    height: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-right: 224px;
+    padding-top: 52px;
+  }
+}
+
+[id='nav-toggle'] {
+  position: absolute;
+  display: none;
+}
+
+[id='nav-toggle']:checked ~ .header__nav > .header__nav-toggle {
+  left: auto;
+  right: 2px;
+  top: 0;
+}
+
+[id='nav-toggle']:checked ~ .header__nav {
+  right: 0;
+  box-shadow: 4px 0px 20px 0px $active-color;
+  // overflow-y: auto;
+}
+
+[id='nav-toggle']:checked ~ .header__nav > .header__nav-toggle:after {
+  content: '\2715';
+  height: 14px;
+  width: 14px;
+  color: $color-white;
+  padding: 25px 30px;
+  &:focus,
+  &:hover {
+    color: $color-red;
+  }
+}
+
+/**
+ * профиксим баг в Android <= 4.1.2
+ * см: http://timpietrusky.com/advanced-checkbox-hack
+ */
+
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  to {
+    padding: 0;
+  }
+}
+
+.header__buy-btn {
+  @extend %link;
+  margin: 0 20px 19px;
+  // position: relative;
+  width: 209px;
+  height: 44px;
+  font-weight: 700;
+  color: $color-red;
+  background-color: $color-white;
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+  transition: $time-var $transform-function;
+  opacity: 0;
+  transform: scale(0.1, 0.1);
+  transform-origin: 0% 0%;
+  transition: opacity 0.8s, transform 0.8s;
+  &:hover,
+  &:focus {
+    background-color: $active-color-bg;
+  }
+}
+
+.header__btn-arrow {
+  margin-left: 16px;
+}
+
+[id='nav-toggle']:checked ~ .header__nav .header__buy-btn {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.header__list {
+  @extend %list;
+  display: block;
+  padding: 0;
+  & .link.current {
+    color: $color-red;
+  }
+}
+
+.header__list .header__item {
+  justify-content: center;
+  height: 42px;
+  padding: 13px 21px 0 21px;
+  border-bottom: 1px solid;
+  border-color: #e18298;
+  &:first-child {
+    border-top: 1px solid;
+    border-color: #e18298;
+  }
+  opacity: 0;
+  transform: translateX(50%);
+  transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+}
+
+[id='nav-toggle']:checked ~ .header__nav > .header__list > .header__item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.header__nav > .header__list > .header__item:nth-child(2) {
+  transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
+}
+
+.header__nav > .header__list > .header__item:nth-child(3) {
+  transition: opacity 0.5s 0.3s, transform 0.5s 0.3s;
+}
+
+.header__nav > .header__list > .header__item:nth-child(4) {
+  transition: opacity 0.5s 0.4s, transform 0.5s 0.4s;
+}
+
+.header__nav > .header__list > .header__item:nth-child(5) {
+  transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
+}
+
+.header__list .link {
+  @extend %link;
+  color: $color-white;
+  font-weight: 700;
+  transition: $time-var $transform-function;
+  &:focus,
+  &:hover {
+    color: $color-red;
+    padding-left: 15px;
+  }
+  @media screen and (max-width: 1199px) {
+    font-size: 14px;
+  }
+}
+
+/*
+.mask-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+}
+ 
+[id='nav-toggle']:checked ~ .mask-content {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity .5s, visibility .5s;
+    transition: opacity .5s, visibility .5s;
+}
+*/
+.header__btn.tablet {
+  @extend %link;
+  display: block;
+  margin: 38px 34px 0 574px;
+  position: absolute;
+  width: 160px;
+  height: 44px;
+  font-weight: 700;
+  color: $color-red;
+  z-index: 2;
+  background-color: $color-white;
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+  transition: $time-var $transform-function;
+  &:hover,
+  &:focus {
+    background-color: $active-color-bg;
+  }
+}
