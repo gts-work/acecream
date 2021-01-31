@@ -115,6 +115,15 @@
 
 .hero__btn__made {
   background-color: $color-white;
+
+  &:active {
+    background-color: $active-color-bg;
+    // background-color: green;
+  }
+}
+
+.hero__btn__products:active {
+  background-color: $active-color;
 }
 
 .hero__number,
@@ -290,6 +299,11 @@
     border-radius: 50%;
 
     background-color: $color-white;
+
+    &:active {
+      background-color: $active-color-bg;
+      // background-color: green;
+    }
   }
 
   .hero__icon {
