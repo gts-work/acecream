@@ -1,1 +1,31 @@
-<h1>Slider</h1>
+<section class="slider">
+  <div class="container">
+    <h2 class="slider__title visually-hidden">Reviews</h2>
+    <div class="slider__wrapper">
+      <picture class="slider-picture">
+        <source
+          srcset="
+            ../src/images/slider/slider-1.webp    1x,
+            ../src/images/slider/slider-1@2x.webp 2x,
+            ../src/images/slider/slider-1@3x.webp 3x
+          "
+          type="image/webp"
+        />
+        <img
+          src="../src/images/slider/slider-1.png"
+          alt="photo person"
+          class="slider__photo"
+        />
+      </picture>
+      <p class="slider__comments">
+        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam
+        sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis
+        in nibh vel risus.
+      </p>
+      <svg class="slider__ellipsis">
+        <use class="slider__icon"></use>
+      </svg>
+      <p class="slider__info-person"></p>
+    </div>
+  </div>
+</section>
