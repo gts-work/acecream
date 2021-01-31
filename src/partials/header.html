@@ -1,6 +1,6 @@
 
+<div class="header__container">
 <h1 class="visually-hidden">Header</h1>
-<nav class="header__nav">
     <div class="header__logo">
         <picture>
             <source srcset="./images/header/logo.webp,
@@ -16,16 +16,11 @@
         </picture>
     </div>
 
-        <!-- <button type="button" class="header__mob-menu" aria-controls="menu-container" aria-expanded="false" data-menu-button>
-            <svg width="20" height="12" aria-label="Кнопка мобильного меню">
-                <use class="burger" href="./images/sprite.svg#burger"></use>
-                <use class="close" href="./images/sprite.svg#close"></use>
-            </svg>
-        </button> -->
-
-    <div class="header__menu" id="menu-container" data-menu>
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="header__nav">   
+    <label for="nav-toggle" class="header__nav-toggle" onclick></label>
         <button type="button" class="header__buy-btn">Buy now
-            <svg class="btn__arrow" width="8" height="8">
+            <svg class="header__btn-arrow" width="8" height="8">
                <use href="./images/sprite.svg#right"></use>
             </svg>
         </button>
@@ -36,6 +31,13 @@
             <li class="header__item"><a href="" class="link">Our products</a></li>
             <li class="header__item"><a href="" class="link">Contact</a></li>
         </ul>
-    </div>
-    <script src="./mobile-menu.js"></script>
+        <!-- <div class="mask-content"></div> -->
 </nav>
+
+<!-- Buy button for tablet -->
+        <button type="button" class="header__btn tablet">Buy now
+            <svg class="header__btn-arrow" width="8" height="8">
+                <use href="./images/sprite.svg#right"></use>
+            </svg>
+        </button>
+</div>
