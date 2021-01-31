@@ -512,9 +512,15 @@
     width: 26px;
     height: 26px;
 
+    transform: scale(1);
+
+    transition: background-color $time-var $transform-function;
+
     &:hover,
     :active {
       background-color: $active-color-bg;
+      transform: scale(1.2);
+      cursor: pointer;
       // background-color: green;
     }
   }
@@ -527,13 +533,29 @@
     top: 5px;
   }
 
-  .hero__btn__made:hover {
-    background-color: $active-color-bg;
-    // background-color: green;
+  .hero__btn__made {
+    transform: scale(1);
+
+    transition: background-color $time-var $transform-function;
+
+    &:hover {
+      background-color: $active-color-bg;
+      transform: scale(1.2);
+      cursor: pointer;
+      // background-color: green;
+    }
   }
 
-  .hero__btn__products:hover {
-    background-color: $active-color;
+  .hero__btn__products {
+    transform: scale(1);
+
+    transition: background-color $time-var $transform-function;
+
+    &:hover {
+      background-color: $active-color;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
   }
 
   .hero__image-girl {
