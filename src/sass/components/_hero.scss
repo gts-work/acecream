@@ -17,7 +17,6 @@
 
 .hero__title {
   display: inline-block;
-  //   position: relative;
   position: absolute;
 
   bottom: 203px;
@@ -58,7 +57,6 @@
   position: relative;
 
   width: 171px;
-  // max-width: 100%;
 
   margin-left: 117px;
   margin-right: 32px;
@@ -132,7 +130,7 @@
 .hero__image-girl,
 .hero__image-milk,
 .hero__description,
-.hero__block {
+.hero__icon-item {
   display: none;
 }
 
@@ -247,11 +245,6 @@
     right: 34px;
     bottom: 0;
 
-    // width: 171px;
-    // max-width: 100%;
-
-    // margin-left: 556px;
-    // margin-right: 34px;
     padding-left: 0px;
     padding-right: 0px;
     margin-bottom: -5px;
@@ -274,20 +267,12 @@
     color: $color-white;
   }
 
-  .hero__block {
-    display: block;
-    position: absolute;
-
-    // left: 154px;
-    // bottom: 30px;
-  }
-
   .hero__icon-item {
     display: inline-block;
     position: relative;
 
     left: 154px;
-    bottom: 50px;
+    bottom: 30px;
 
     // margin-right: auto;
     // margin-left: auto;
@@ -425,6 +410,182 @@
 
     &.hero__csrcle_2 {
       top: 151px;
+    }
+  }
+}
+
+@media screen and (min-width: $media-desctop) {
+  .hero__container {
+    max-width: $media-desctop;
+  }
+
+  .hero__image-icecream {
+    width: 236px;
+    margin-left: 594px;
+    margin-right: 0;
+    margin-bottom: -23px;
+  }
+
+  .circle {
+    width: 538px;
+    height: 538px;
+
+    bottom: 30px;
+
+    left: 475px;
+  }
+
+  .hero__image-girl {
+    display: inline-block;
+    position: absolute;
+
+    right: 34px;
+    bottom: 0;
+
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: -5px;
+
+    border: 0;
+  }
+
+  .hero__title {
+    left: 115px;
+    bottom: 357px;
+
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .sub-title {
+    font-size: 58px;
+    line-height: 0.9;
+    letter-spacing: 0.04em;
+  }
+
+  .hero__menu {
+    bottom: 292px;
+    left: 115px;
+
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .hero__btn {
+    padding: 11px 20px 11px 20px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .hero__link {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .hero__image-milk {
+    left: 77px;
+    bottom: 45px;
+
+    width: 188px;
+    height: 191px;
+  }
+
+  .hero__description {
+    width: 200px;
+
+    left: 295px;
+    bottom: 102px;
+
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  .hero__icon-item {
+    display: inline-block;
+    position: relative;
+
+    left: 295px;
+    bottom: 56px;
+
+    width: 26px;
+    height: 26px;
+
+    &:hover,
+    :active {
+      background-color: $active-color-bg;
+      // background-color: green;
+    }
+  }
+
+  .hero__icon {
+    width: 33px;
+    height: 12px;
+
+    left: -3px;
+    top: 5px;
+  }
+
+  .hero__btn__made:hover {
+    background-color: $active-color-bg;
+    // background-color: green;
+  }
+
+  .hero__btn__products:hover {
+    background-color: $active-color;
+  }
+
+  .hero__image-girl {
+    width: 293px;
+    height: 232px;
+
+    right: 109px;
+    bottom: 0;
+  }
+
+  .hero__number {
+    right: 116px;
+
+    font-size: 46px;
+    line-height: 1.15;
+
+    &.hero__cales {
+      top: 160px;
+    }
+
+    &.hero__trucks {
+      top: 248px;
+    }
+  }
+
+  .hero__text {
+    right: 115px;
+
+    font-size: 14px;
+    line-height: 1.29;
+
+    &.hero__cales-txt {
+      top: 215px;
+    }
+
+    &.hero__trucks-txt {
+      top: 306px;
+    }
+  }
+
+  .hero__circlemin {
+    right: 97px;
+
+    width: 30px;
+    height: 30px;
+
+    &.hero__csrcle_1 {
+      top: 154px;
+    }
+
+    &.hero__csrcle_2 {
+      top: 248px;
     }
   }
 }
