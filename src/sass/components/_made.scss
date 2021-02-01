@@ -298,20 +298,6 @@
   }
 }
 
-.made__opacity-text {
-  @media screen and (max-width: 320px) {
-    display: none;
-  }
-  @media screen and (min-width: 320px) {
-    display: inline;
-    opacity: 0;
-  }
-
-  @media screen and (min-width: 576px) {
-    display: none;
-  }
-}
-
 .made__paragraph-second {
   margin-top: 30px;
   margin-bottom: 0;
