@@ -27,11 +27,12 @@
     background-image: url('../images/made/desctop/made-bg.png');
     background-image: url('../images/made/desctop/made-bg.webp');
 
-    background-position: 0 350px;
+    background-position: center 350px;
+    background-size: 1280px;
   }
 }
 
-/*Background-images for mobil 2x 3x webp and png*/
+/*Background-images for mobil 2x 3x png webp */
 
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
@@ -66,18 +67,18 @@
   }
 }
 
-/*@media screen and (min-device-pixel-ratio: 3),
+@media screen and (min-device-pixel-ratio: 3),
   screen and (min-resolution: 3dppx),
   screen and (min-resolution: 288dpi) {
   .made {
     background-image: url('../images/made/mob/made-bg_mob@3x.webp');
     @media screen and (min-width: 768px) {
       background-image: none;
+    }
   }
-  }
-}*/
+}
 
-/*Background-images for desctop 2x 3x webp and png*/
+/*Background-images for desctop 2x 3x png webp */
 
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
@@ -298,7 +299,14 @@
 }
 
 .made__opacity-text {
-  opacity: 0;
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
+  @media screen and (min-width: 320px) {
+    display: inline;
+    opacity: 0;
+  }
+
   @media screen and (min-width: 576px) {
     display: none;
   }
@@ -351,9 +359,14 @@
 
   border-radius: 22px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+  transition: background-color $time-var $transform-function;
 
   &:hover,
   &:focus {
+    @media screen and (min-width: 768px) {
+      transform: scale(1.2);
+    }
     background-color: $active-color-bg;
   }
 }
@@ -429,30 +442,7 @@
   }
 }
 
-/*image-backet for mobile webp and png*/
-
-.made__box:nth-child(1)::before {
-  background-image: url('../images/made/made-icon-1.webp');
-  background-repeat: no-repeat;
-  background-size: 33px;
-  background-position: left top;
-}
-
-@media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-  .made__box:nth-child(1)::before {
-    background-image: url('../images/made/made-icon-1@2x.webp');
-  }
-}
-
-@media screen and (min-device-pixel-ratio: 3),
-  screen and (min-resolution: 3dppx),
-  screen and (min-resolution: 288dpi) {
-  .made__box:nth-child(1)::before {
-    background-image: url('../images/made/made-icon-1@3x.webp');
-  }
-}
+/*image-backet for webp and png*/
 
 .made__box:nth-child(1)::before {
   background-image: url('../images/made/made-icon-1.png');
@@ -477,30 +467,30 @@
   }
 }
 
-/*apple-backet for mobile webp and png*/
-
-.made__box:nth-child(2)::before {
-  background-image: url('../images/made/made-icon-2.webp');
+.made__box:nth-child(1)::before {
+  background-image: url('../images/made/made-icon-1.webp');
   background-repeat: no-repeat;
-  background-size: 50px;
+  background-size: 33px;
   background-position: left top;
 }
 
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
-  .made__box:nth-child(2)::before {
-    background-image: url('../images/made/made-icon-2@2x.webp');
+  .made__box:nth-child(1)::before {
+    background-image: url('../images/made/made-icon-1@2x.webp');
   }
 }
 
 @media screen and (min-device-pixel-ratio: 3),
   screen and (min-resolution: 3dppx),
   screen and (min-resolution: 288dpi) {
-  .made__box:nth-child(2)::before {
-    background-image: url('../images/made/made-icon-2@3x.webp');
+  .made__box:nth-child(1)::before {
+    background-image: url('../images/made/made-icon-1@3x.webp');
   }
 }
+
+/*apple-backet for webp and png*/
 
 .made__box:nth-child(2)::before {
   background-image: url('../images/made/made-icon-2.png');
@@ -525,26 +515,26 @@
   }
 }
 
-.made__box:nth-child(3)::before {
-  background-image: url('../images/made/made-icon-3.webp');
+.made__box:nth-child(2)::before {
+  background-image: url('../images/made/made-icon-2.webp');
   background-repeat: no-repeat;
-  background-size: 44px;
+  background-size: 50px;
   background-position: left top;
 }
 
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
-  .made__box:nth-child(3)::before {
-    background-image: url('../images/made/made-icon-3@2x.webp');
+  .made__box:nth-child(2)::before {
+    background-image: url('../images/made/made-icon-2@2x.webp');
   }
 }
 
 @media screen and (min-device-pixel-ratio: 3),
   screen and (min-resolution: 3dppx),
   screen and (min-resolution: 288dpi) {
-  .made__box:nth-child(3)::before {
-    background-image: url('../images/made/made-icon-3@3x.webp');
+  .made__box:nth-child(2)::before {
+    background-image: url('../images/made/made-icon-2@3x.webp');
   }
 }
 
@@ -568,6 +558,29 @@
   screen and (min-resolution: 288dpi) {
   .made__box:nth-child(3)::before {
     background-image: url('../images/made/made-icon-3@3x.png');
+  }
+}
+
+.made__box:nth-child(3)::before {
+  background-image: url('../images/made/made-icon-3.webp');
+  background-repeat: no-repeat;
+  background-size: 44px;
+  background-position: left top;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .made__box:nth-child(3)::before {
+    background-image: url('../images/made/made-icon-3@2x.webp');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+  .made__box:nth-child(3)::before {
+    background-image: url('../images/made/made-icon-3@3x.webp');
   }
 }
 
