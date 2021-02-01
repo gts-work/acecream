@@ -4,34 +4,43 @@
         <picture>
             <source srcset="./images/header/logo.webp,
                             ./images/header/logo@2x.webp 2x,
-                            ./images/header/logo@3x.webp 3x" type="image/webp">
+                            ./images/header/logo@3x.webp 3x" 
+                            type="image/webp">
             <img srcset="./images/header/logo.png,
                          ./images/header/logo@2x.png 2x,
                          ./images/header/logo@3x.png 3x" 
                          src="./images/header/logo.png"
-                         alt="logo">
+                         alt="logo">     
         </picture>
     </div>
 
     <!-- <input type="checkbox" id="nav-toggle" hidden> -->
-    <button onclick="handleTopNav()">
-        +
+    <button class="header__burger" id="btn_modal_window">
+        <svg width="20" height="24" aria-label="Кнопка мобильного меню">
+           <use class="burger" href="./images/sprite.svg#burger"></use>
+        </svg>
     </button>
-    <nav class="header__nav">
-        <!-- <label for="nav-toggle" class="header__nav-toggle" onclick></label> -->
-        <button type="button" class="header__buy-btn">Buy now
-            <svg class="header__btn-arrow" width="8" height="8">
-                <use href="./images/sprite.svg#right"></use>
-            </svg>
-        </button>
-        <ul class="header__list">
-            <li class="header__item"><a href="" class="link current">Home</a></li>
-            <li class="header__item"><a href="" class="link">About us</a></li>
-            <li class="header__item"><a href="#made" class="link">How it’s made?</a></li>
-            <li class="header__item"><a href="#products" class="link">Our products</a></li>
-            <li class="header__item"><a href="#contacts" class="link">Contact</a></li>
-        </ul>
-        <!-- <div class="mask-content"></div> -->
+    <nav  id="my_modal" class="header__modal">
+        <div class="header__modal-content">
+            <span id="close_modal_window" class="close_modal_window">
+                <svg width="14" height="14" aria-label="Кнопка мобильного меню">
+                    <use class="header__close" href="./images/sprite.svg#close"></use>
+                </svg>
+            </span>
+            <button type="button" class="header__buy-btn">Buy now
+                <svg class="header__btn-arrow" width="8" height="8">
+                    <use href="./images/sprite.svg#right"></use>
+                </svg>
+            </button>
+            <ul class="header__list">
+                <li class="header__item"><a href="" class="link current">Home</a></li>
+                <li class="header__item"><a href="" class="link">About us</a></li>
+                <li class="header__item"><a href="#made" class="link">How it’s made?</a></li>
+                <li class="header__item"><a href="#products" class="link">Our products</a></li>
+                <li class="header__item"><a href="#contacts" class="link">Contact</a></li>
+            </ul>
+        </div>
+        
     </nav>
 
     <!-- Buy button for tablet -->
@@ -41,27 +50,14 @@
         </svg>
     </button>
 
+    <script src="./mobile-menu.js"></script>
+
     <!-- <script src="../mobile-menu.js"/> -->
-    <script>
-
-        function handleTopNav() => {
-            const mobileMenuRef = document.querySelector('.header__nav');
-            console.log(mobileMenuRef);
-            mobileMenuRef.style.right = 0;
-
-        }
-        // const menuBtnRef = document.querySelector('[data-menu-button]');
-
-        // menuBtnRef.addEventListener('click', () => {
-        //   const expanded =
-        //     menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
-
-        //   menuBtnRef.classList.toggle('is-open');
-        //   menuBtnRef.setAttribute('aria-expanded', !expanded);
-
-        //   mobileMenuRef.classList.toggle('is-open');
-        // });
-        
-    </script>
+    <!-- <script>
+        function handleTopNav() {
+        const mobileMenuRef = document.querySelector('.header__nav');
+        const right = parseInt(window.getComputedStyle(mobileMenuRef,null).getPropertyValue("right"));
+        if (right < 0) { mobileMenuRef.style.right=0; } else { mobileMenuRef.style.right=-250; } }
+    </script> -->
        
 
