@@ -75,9 +75,6 @@
   top: 0;
   transition: right $time-var $transform-function;
   z-index: 100;
-  // @media screen and (min-width: 1280px) {
-  //   display: block;
-  // }
 }
 
 .header__modal-content {
@@ -94,10 +91,6 @@
   @media screen and (min-width: 768px) {
     width: 254px;
   }
-  // @media screen and (min-width: 1280px) {
-  //   display: flex;
-  //   width: 100%;
-  // }
 }
 
 @keyframes animate {
@@ -161,11 +154,9 @@
   & .link.current {
     color: $color-red;
   }
-  // & .tablet {
-  //   @media screen and (min-width: 1280px) {
-  //     display: none;
-  //   }
-  // }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .header__list .header__item {
@@ -189,18 +180,6 @@
     &:not(:last-child) {
       padding-left: 35px;
     }
-    // &:nth-child(2) {
-    //   transition-delay: 0.1s;
-    // }
-    // &:nth-child(3) {
-    //   transition-delay: 0.2s;
-    // }
-    // &:nth-child(4) {
-    //   transition-delay: 0.3s;
-    // }
-    // &:nth-child(5) {
-    //   transition-delay: 0.4s;
-    // }
   }
 }
 
