@@ -3,6 +3,7 @@
   // width: $width;
   box-shadow: $shadow;
   padding: $padding;
+  background: $background;
 }
 
 @mixin button($width, $height, $padding) {
