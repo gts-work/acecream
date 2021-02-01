@@ -37,6 +37,8 @@
 }
 
 .header__logo {
+  height: 50px;
+  width: 199px;
   margin: 6px 0px 0 20px;
   @media screen and (min-width: 768px) {
     margin: 37px 291px 0 34px;
@@ -176,9 +178,9 @@
   }
   @media screen and (min-width: 1280px) {
     border: none;
-    padding-top: 50px;
+    padding: 50px 0 0 0;
     &:not(:last-child) {
-      padding-left: 35px;
+      padding-right: 35px;
     }
   }
 }
@@ -226,7 +228,7 @@
   }
 }
 
-.header__list.tablet {
+.header__list.desctop {
   @media screen and (max-width: 1279px) {
     display: none;
   }
