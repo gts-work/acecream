@@ -170,18 +170,16 @@
   height: 12px;
 
   /* content: '•'; */
-  content: '';
-  background-image: url(./images/Ellipse.svg);
+  content: url(./images/Ellipse.svg);
   text-align: center;
 
-  opacity: 0.25;
+  /* opacity: 0.25; */
   color: black;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  background-image: url(./images/home.svg);
-  z-index: 2;
+  opacity: 1;
+  content: url(./images/home.svg);
 }
