@@ -22,13 +22,52 @@
   @include container(20px, 20px);
 }
 
-.slider__wrapper {
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider__picture {
+  display: block;
+  margin-bottom: 25px;
   text-align: center;
 }
 
 .slider__reviews {
+  position: relative;
+  width: 280px;
+  margin-top: 0;
+  margin-bottom: 52px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 42px;
   padding-bottom: 26px;
-  padding-right: 66px;
-  padding-left: 57px;
+  padding-right: 64px;
+  padding-left: 63px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+  color: $color-black;
+  background-color: $color-slider-bg;
+}
+
+.slider__span {
+  // position: absolute;
+  // content: '';
+  // width: 180px;
+  // height: 1px;
+  // top: 10px;
+  // left: 51px;
+  // background-color: #e1e1e1;
+  padding-bottom: 3px;
+  border-bottom: solid 1px #e1e1e1;
+}
+
+.slider__info {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  text-align: center;
 }
