@@ -14,7 +14,6 @@
         </picture>
     </div>
 
-    <!-- <input type="checkbox" id="nav-toggle" hidden> -->
     <button class="header__burger" id="btn_modal_window">
         <svg width="20" height="24" aria-label="Кнопка мобильного меню">
            <use class="burger" href="./images/sprite.svg#burger"></use>
@@ -39,10 +38,17 @@
                 <li class="header__item"><a href="#products" class="link">Our products</a></li>
                 <li class="header__item"><a href="#contacts" class="link">Contact</a></li>
             </ul>
-        </div>
-        
+        </div>        
     </nav>
-
+    
+   <!-- Desctop menu nav -->
+    <ul class="header__list">
+        <li class="header__item"><a href="" class="link current">Home</a></li>
+        <li class="header__item"><a href="" class="link">About us</a></li>
+        <li class="header__item"><a href="#made" class="link">How it’s made?</a></li>
+        <li class="header__item"><a href="#products" class="link">Our products</a></li>
+        <li class="header__item"><a href="#contacts" class="link">Contact</a></li>
+    </ul>
     <!-- Buy button for tablet -->
     <button type="button" class="header__btn tablet">Buy now
         <svg class="header__btn-arrow" width="8" height="8">
@@ -52,12 +58,5 @@
 
     <script src="./mobile-menu.js"></script>
 
-    <!-- <script src="../mobile-menu.js"/> -->
-    <!-- <script>
-        function handleTopNav() {
-        const mobileMenuRef = document.querySelector('.header__nav');
-        const right = parseInt(window.getComputedStyle(mobileMenuRef,null).getPropertyValue("right"));
-        if (right < 0) { mobileMenuRef.style.right=0; } else { mobileMenuRef.style.right=-250; } }
-    </script> -->
        
 
