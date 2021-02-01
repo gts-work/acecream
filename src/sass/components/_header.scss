@@ -134,7 +134,9 @@
   border-radius: 22px;
   cursor: pointer;
   border: none;
-  transition: background-color $time-var $transform-function;
+  outline: transparent;
+  transition: background-color $time-var $transform-function,
+    transform $time-var $transform-function;
   transform: scale(1);
   &:hover,
   &:focus {
@@ -215,8 +217,10 @@
   border-radius: 22px;
   cursor: pointer;
   border: none;
+  outline: transparent;
   transform: scale(1);
-  transition: background-color $time-var $transform-function;
+  transition: background-color $time-var $transform-function,
+    transform $time-var $transform-function;
   &:hover,
   &:focus {
     background-color: $active-color-bg;
