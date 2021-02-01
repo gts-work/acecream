@@ -134,10 +134,12 @@
   border-radius: 22px;
   cursor: pointer;
   border: none;
-  transition: $time-var $transform-function;
+  transition: background-color $time-var $transform-function;
+  transform: scale(1);
   &:hover,
   &:focus {
     background-color: $active-color-bg;
+    transform: scale(1.2);
   }
   @media screen and (min-width: 768px) {
     width: 186px;
@@ -162,8 +164,6 @@
 }
 
 .header__list .header__item {
-  // animation-name: animate;
-  // animation-duration: 0.1s;
   justify-content: center;
   height: 42px;
   padding: 13px 21px 0 21px;
@@ -189,7 +189,7 @@
   @extend %link;
   color: $color-white;
   font-weight: 700;
-  transition: $time-var $transform-function;
+  transition: all $time-var $transform-function;
   &:focus,
   &:hover {
     color: $color-red;
@@ -215,10 +215,12 @@
   border-radius: 22px;
   cursor: pointer;
   border: none;
-  transition: $time-var $transform-function;
+  transform: scale(1);
+  transition: background-color $time-var $transform-function;
   &:hover,
   &:focus {
     background-color: $active-color-bg;
+    transform: scale(1.2);
   }
   @media screen and (min-width: 768px) {
     display: block;
