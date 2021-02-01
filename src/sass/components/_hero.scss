@@ -536,7 +536,10 @@
   .hero__btn__made {
     transform: scale(1);
 
-    transition: background-color $time-var $transform-function;
+    // transition: background-color $time-var $transform-function;
+
+    transition: background-color $time-var $transform-function,
+      transform $time-var $transform-function;
 
     &:hover {
       background-color: $active-color-bg;
@@ -549,7 +552,10 @@
   .hero__btn__products {
     transform: scale(1);
 
-    transition: background-color $time-var $transform-function;
+    // transition: background-color $time-var $transform-function;
+
+    transition: background-color $time-var $transform-function,
+      transform $time-var $transform-function;
 
     &:hover {
       background-color: $active-color;
