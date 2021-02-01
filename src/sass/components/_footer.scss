@@ -4,11 +4,17 @@
 
 .footer__container {
   @include container(20px, 20px);
-  @media screen and (min-width: 768px) {
-    @include container(36px, 36px);
+  width: 320px;
+  @media screen and (min-width: $media-mob-middle) {
+    width: 576px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $media-tab) {
+    @include container(36px, 36px);
+    width: 768px;
+  }
+  @media screen and (min-width: $media-desctop) {
     @include container(115px, 115px);
+    width: 1280px;
   }
 }
 
@@ -18,11 +24,11 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 113px;
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $media-mob-middle) {
     flex-direction: row;
     justify-content: center;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $media-desctop) {
     margin-bottom: 165px;
   }
 }
@@ -39,18 +45,21 @@
   cursor: pointer;
   &:not(:last-child) {
     margin-bottom: 10px;
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: $media-mob-middle) {
       margin-bottom: unset;
       margin-right: 98px;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $media-tab) {
       margin-right: 15px;
     }
   }
+  transform: scale(1);
+  transition: background-color $time-var $transform-function, transform $time-var $transform-function;
+
   &:hover, &:focus {
     background-color: $active-color;
+    transform: scale(1.2);
   }
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .legal__item.light {
@@ -79,23 +88,22 @@
 }
 
 .footer__align {
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $media-mob-middle) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
 }
 
 .footer__title {
   max-width: 234px;
   text-transform: uppercase;
   margin-bottom: 43px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $media-tab) {
     max-width: 340px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $media-desctop) {
     max-width: 477px;
   }
 }
@@ -107,12 +115,12 @@
   font-size: 18px;
   line-height: 1.17;
   margin-bottom: 17px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $media-tab) {
     font-size: 26px;
     line-height: 1.15;
     letter-spacing: 0.04em;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $media-desctop) {
     font-size: 30px;
     line-height: 1.13;
   }
@@ -122,18 +130,18 @@
   font-size: 34px;
   line-height: 1.15;
   letter-spacing: 0.04em;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $media-tab) {
     font-size: 48px;
     letter-spacing: 0.06em;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $media-desctop) {
     font-size: 58px;
     line-height: 1.14;
   }
 }
 
 .footer__contacts {
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $media-mob-middle) {
     display: flex;
     flex-direction: column;
   }
@@ -152,7 +160,7 @@
   height: 32px;
   &:not(:last-child) {
     margin-right: 28px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $media-tab) {
       margin-right: 30px;
     }
   }
@@ -166,9 +174,11 @@
   height: 32px;
   background-color: $color-pink;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
+  transform: scale(1);
+  transition: background-color $time-var $transform-function, transform $time-var $transform-function;
+  &:hover, &:focus {
     background-color: $color-red;
+    transform: scale(1.2);
   }
 }
 
@@ -178,7 +188,7 @@
   line-height: 1.86;
   text-align: right;
   margin-bottom: 43px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $media-tab) {
     font-size: 14px;
     line-height: 1.86;
   }
@@ -195,7 +205,7 @@
 
 .copyright {
   padding: 9px 0 10px 0;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $media-tab) {
     max-width: 150px;
   }
 }
