@@ -4,15 +4,34 @@
     $color-white 7%,
     $color-pink-light 7%,
   );
+  @media screen and (min-width: $media-mob-middle) {
+    padding-bottom: 87px;
+    background-image: linear-gradient(
+      to bottom,
+      $color-white 10%,
+      $color-pink-light 10%,
+    );
+  }
 }
 
 .work-plan__container {
   @include container(20px, 20px);
   padding-bottom: 54px;
+  width: 320px;
+  @media screen and (min-width: $media-mob-middle) {
+    @include container(28px, 28px);
+    width: 576px;
+  }
 }
 
 .work-plan__list {
   @extend %list;
+  @media screen and (min-width: $media-mob-middle) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -17px;
+  }
 }
 
 .work-plan__card {
@@ -25,9 +44,16 @@
     margin-right: auto;
     width: 220px;
   }
+  @media screen and (min-width: $media-mob-middle) {
+    margin-top: 17px;
+  }
+
   &:not(:last-child) {
-    @media screen and (min-width: $media-mob) {
+    @media screen and (max-width: 575px) {
       margin-bottom: 20px;
+    }
+    @media screen and (min-width: $media-mob-middle) {
+      margin-bottom: 17px;
     }
   }
 }
