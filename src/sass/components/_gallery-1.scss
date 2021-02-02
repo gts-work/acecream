@@ -35,7 +35,7 @@
 
   transform: scale(1);
 
-  transition: transform $time-var $transform-function;
+  transition: transform $time-var $transform-function, transform $time-var $transform-function;
 
   &:hover {
     transform: scale(1.2);
