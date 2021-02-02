@@ -224,8 +224,8 @@
   text-align: center;
   color: $color-gray;
 }
-.products__go-top {
-  display: flex;
+.products__go_top {
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -235,7 +235,12 @@
   z-index: 101;
   cursor: pointer;
 }
-.products__go-top-svg {
+.products__go_top-svg {
   fill: $color-red;
   height: 60px;
+}
+
+.products__go_top-show {
+  // display: block;
+  display: flex;
 }
