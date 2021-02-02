@@ -206,15 +206,22 @@
   margin: 0 auto 0;
   border-radius: 50%;
   background-color: $color-white;
+  transform: scale(1);
+  transition: background-color $time-var $transform-function,
+    transform $time-var $transform-function;
   &:hover,
   &:focus {
     background-color: $color-red;
+    transform: scale(1.2);
     .products__arow-right {
       fill: $color-white;
+      transform: scale(1.2);
     }
   }
 }
 .products__arow-right {
   fill: $color-red;
   height: 38px;
+  transform: scale(1);
+  transition: transform $time-var $transform-function;
 }

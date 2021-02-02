@@ -4,5 +4,6 @@ $('.slider__list').slick({
   slidesToScroll: 1,
   autoplay: false,
   dots: true,
-  centerMode: true,
+  arrows: false,
+  centerMode: false,
 });

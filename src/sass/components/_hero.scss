@@ -323,8 +323,8 @@
   }
 
   .circle {
-    width: 324px;
-    height: 324px;
+    width: 340px;
+    height: 340px;
 
     bottom: 46px;
 
@@ -361,7 +361,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    z-index: 5;
+    z-index: 4;
 
     color: $color-red;
 
@@ -514,7 +514,9 @@
 
     transform: scale(1);
 
-    transition: background-color $time-var $transform-function;
+    // transition: background-color $time-var $transform-function;
+    transition: background-color $time-var $transform-function,
+      transform $time-var $transform-function;
 
     &:hover,
     :active {
@@ -536,7 +538,10 @@
   .hero__btn__made {
     transform: scale(1);
 
-    transition: background-color $time-var $transform-function;
+    // transition: background-color $time-var $transform-function;
+
+    transition: background-color $time-var $transform-function,
+      transform $time-var $transform-function;
 
     &:hover {
       background-color: $active-color-bg;
@@ -549,7 +554,10 @@
   .hero__btn__products {
     transform: scale(1);
 
-    transition: background-color $time-var $transform-function;
+    // transition: background-color $time-var $transform-function;
+
+    transition: background-color $time-var $transform-function,
+      transform $time-var $transform-function;
 
     &:hover {
       background-color: $active-color;

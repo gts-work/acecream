@@ -137,6 +137,7 @@
   outline: transparent;
   transition: background-color $time-var $transform-function,
     transform $time-var $transform-function;
+
   transform: scale(1);
   &:hover,
   &:focus {
