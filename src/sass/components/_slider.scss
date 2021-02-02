@@ -43,8 +43,8 @@
   margin-right: auto;
   padding-top: 42px;
   padding-bottom: 26px;
-  padding-right: 64px;
-  padding-left: 63px;
+  padding-right: 71px;
+  padding-left: 62px;
   text-align: center;
   font-weight: 500;
   font-size: 12px;
@@ -53,7 +53,14 @@
   background-color: $color-slider-bg;
   @media screen and (min-width: $media-mob-middle) {
     width: 528px;
+    margin-bottom: 35px;
     padding: 43px 88px 25px 67px;
+  }
+  @media screen and (min-width: $media-tab) {
+    width: 620px;
+    margin-bottom: 24px;
+    padding: 47px 117px 34px 108px;
+    letter-spacing: 0.04em;
   }
 }
 
@@ -63,7 +70,17 @@
   width: 54px;
   height: 40px;
   top: 26px;
-  left: 65px;
+  left: 60px;
+
+  @media screen and (min-width: $media-mob-middle) {
+    top: 27px;
+    left: 60px;
+  }
+
+  @media screen and (min-width: $media-tab) {
+    top: 30px;
+    left: 67px;
+  }
 }
 
 .slider__text-underline {
@@ -72,26 +89,27 @@
   border-bottom: solid 1px $color-slider-border;
 }
 
-// .slider__underline {
-//   @media screen and (max-width: 575px) {
-//     display: inline-block;
-//     justify-content: center;
-//     width: 180px;
-//     border-bottom: solid 1px $color-slider-border;
-//   }
-//   @media screen and (min-width: $media-mob-middle) {
-//     width: 428px;
-//   }
-// }
-
-.slider__ellipsis {
-  display: block;
-  width: 280px;
+.slider__circles {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   height: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 22px;
-  fill: $active-color;
+  margin-bottom: 18px;
+
+  @media screen and (min-width: $media-tab) {
+    margin-bottom: 14px;
+  }
+}
+
+.slider__circle {
+  background-color: $active-color;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-right: 10px;
+  // &:not(:last-child) {
+  //   margin-right: 10px;
+  // }
 }
 
 .slider__info {

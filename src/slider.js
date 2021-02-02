@@ -6,4 +6,5 @@ $('.slider__list').slick({
   dots: true,
   arrows: false,
   centerMode: false,
+  speed: 750,
 });
