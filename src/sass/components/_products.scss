@@ -207,7 +207,8 @@
   border-radius: 50%;
   background-color: $color-white;
   transform: scale(1);
-  transition: background-color $time-var $transform-function, transform $time-var $transform-function
+  transition: background-color $time-var $transform-function,
+    transform $time-var $transform-function;
   &:hover,
   &:focus {
     background-color: $color-red;
@@ -222,5 +223,5 @@
   fill: $color-red;
   height: 38px;
   transform: scale(1);
-  transition: transform $time-var $transform-function
+  transition: transform $time-var $transform-function;
 }
