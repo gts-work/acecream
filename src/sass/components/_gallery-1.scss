@@ -38,82 +38,217 @@
   transition: transform $time-var $transform-function;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     cursor: pointer;
+    z-index: 5;
   }
 }
 
 .gallery_img1 {
-  @include bg-image('../images//gallery-1/gallery1.jpg');
-
+  @include bg-image ('../images//gallery-1/gallery1.jpg');
+  @include bg-image("../images//gallery-1/gallery1.webp");
   top: 142px;
   left: 134px;
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x1.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x1.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x1.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x1.webp");
+  }
 }
 
 .gallery_img2 {
   @include bg-image('../images//gallery-1/gallery2.jpg');
+  @include bg-image("../images//gallery-1/gallery2.webp");
 
   top: 84px;
   left: 279px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x2.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x2.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x2.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x2.webp");
+  }
 }
 
 .gallery_img3 {
   @include bg-image('../images//gallery-1/gallery3.jpg');
+  @include bg-image("../images//gallery-1/gallery3.webp");
 
   top: 233px;
   left: 279px;
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x3.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x3.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x3.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x3.webp");
+  }
 }
 
 .gallery_img4 {
   @include bg-image('../images//gallery-1/gallery4.jpg');
+  @include bg-image("../images//gallery-1/gallery4.webp");
 
   top: 0;
   left: 425px;
 
   width: 284px;
   height: 284px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x4.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x4.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x4.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x4.webp");
+  }
 }
 
 .gallery_img5 {
   @include bg-image('../images//gallery-1/gallery5.jpg');
+  @include bg-image("../images//gallery-1/gallery5.webp");
 
   top: 294px;
   left: 425px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x5.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x5.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x5.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x5.webp");
+  }
 }
 
 .gallery_img6 {
   @include bg-image('../images//gallery-1/gallery6.jpg');
+  @include bg-image("../images//gallery-1/gallery6.webp");
 
   top: 96px;
   left: 715px;
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x6.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x6.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x6.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x6.webp");
+  }
 }
 
 .gallery_img7 {
   @include bg-image('../images//gallery-1/gallery7.jpg');
+  @include bg-image("../images//gallery-1/gallery7.webp");
 
   top: 245px;
   left: 715px;
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x7.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x7.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x7.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x7.webp");
+  }
 }
 
 .gallery_img8 {
   @include bg-image('../images//gallery-1/gallery8.jpg');
+  @include bg-image("../images//gallery-1/gallery8.webp");
 
   top: 53px;
   left: 861px;
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x8.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x8.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x8.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x8.webp");
+  }
 }
 
 .gallery_img9 {
   @include bg-image('../images//gallery-1/gallery9.jpg');
+  @include bg-image("../images//gallery-1/gallery9.webp");
 
   top: 199px;
   left: 861px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x9.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x9.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x9.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x9.webp");
+  }
 }
 
 .gallery_img10 {
   @include bg-image('../images//gallery-1/gallery10.jpg');
+  @include bg-image("../images//gallery-1/gallery10.webp");
 
   top: 154px;
   left: 1006px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @include bg-image ('../images//gallery-1/gallery@2x10.jpg');
+    @include bg-image("../images//gallery-1/gallery@2x10.webp");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+    @include bg-image ('../images//gallery-1/gallery@3x10.jpg');
+    @include bg-image("../images//gallery-1/gallery@3x10.webp");
+  }
 }
 
 @media screen and (min-width: $media-desctop) {
