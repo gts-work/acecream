@@ -25,3 +25,11 @@
 
   // outline: 1px solid tomato;
 }
+
+@mixin bg-image($url) {
+  background-image: url($url),
+    linear-gradient(to right, $color-pink-dark, $color-pink);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

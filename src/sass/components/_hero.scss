@@ -514,7 +514,9 @@
 
     transform: scale(1);
 
-    transition: background-color $time-var $transform-function;
+    // transition: background-color $time-var $transform-function;
+    transition: background-color $time-var $transform-function,
+      transform $time-var $transform-function;
 
     &:hover,
     :active {
